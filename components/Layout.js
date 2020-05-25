@@ -9,28 +9,38 @@ export default function Layout(props) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
+                {!props.noHeader && (
+                    <React.Fragment>
+                        <h1 className="title">{ props.siteTitle }</h1>
+                        <p className="description">{ props.siteDescription }</p>
+                    </React.Fragment>
+                )}
                 { props.children }
             </main>
             <footer>
                 <p>Last updated at: { props.lastUpdated }</p>
             </footer>
             <style jsx>{`
+                * {
+                    box-sizing: border-box;
+                    font-family: Hack;
+                }
                 .container {
                   min-height: 100vh;
                   padding: 0 0.5rem;
                   display: flex;
                   flex-direction: column;
-                  justify-content: center;
+                  justify-content: space-between;
                   align-items: center;
                 }
                 
                 main {
-                  padding: 5rem 0;
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
+                    padding: 5rem 0;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                 }
                 
                 footer {

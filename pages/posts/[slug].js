@@ -1,17 +1,24 @@
 import React from 'react';
 import ReactMarkdown from "react-markdown";
 import glob from "glob";
+import moment from "moment";
+import Layout from "../../components/Layout";
 
 export default function Post(props) {
     return (
-        <div>
-            <ReactMarkdown source={props.markdownBody}/>
+        <Layout
+            noHeader
+            lastUpdated={props.lastUpdated}
+        >
+            <div className="post-content">
+                <ReactMarkdown source={props.markdownBody}/>
+            </div>
             <style jsx>{`
-            * {
-                font-family: Hack
-            }
+                .post-content {
+                    display: block;
+                }
             `}</style>
-        </div>
+        </Layout>
     )
 }
 
@@ -21,6 +28,7 @@ export async function getStaticProps({ ...ctx }) {
     return {
         props: {
             markdownBody: content.default,
+            lastUpdated: moment().format("MM/DD/YYYY")
         }
     }
 }
