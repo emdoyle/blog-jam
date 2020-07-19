@@ -1,4 +1,6 @@
 import React from "react";
+import Head from "next/head";
+import DarkMode from "../components/DarkMode";
 import Layout from '../components/Layout';
 import PostList from '../components/PostList'
 import moment from "moment";
@@ -6,15 +8,21 @@ import glob from "glob";
 
 export default function Home(props) {
     return (
-        <Layout
-            siteTitle="Figures"
-            siteDescription="Some blog posts"
-            lastUpdated={props.lastUpdated}
-        >
-            <PostList
-                postNames={props.postNames}
-            />
-        </Layout>
+        <React.Fragment>
+            <Head>
+                <title>Figures</title>
+                <DarkMode />
+            </Head>
+            <Layout
+                siteTitle="Figures"
+                siteDescription="Some blog posts"
+                lastUpdated={props.lastUpdated}
+            >
+                <PostList
+                    postNames={props.postNames}
+                />
+            </Layout>
+        </React.Fragment>
     )
 }
 
