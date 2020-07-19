@@ -33,6 +33,11 @@ footer {
   align-items: center;
 }
 
+footer .footer-item {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 footer img {
   margin-left: 0.5rem;
 }
@@ -86,6 +91,11 @@ code {
 
 .logo {
   height: 1em;
+}
+
+.dark-mode-button {
+  height: 24px;
+  width: 48px;
 }
 
 @media (max-width: 600px) {
