@@ -8,11 +8,11 @@ export default function DarkToggle() {
     return null;
   }
 
-  const svgSource =
-    colorMode === "light" ? "/moon_empty.svg" : "/moon_filled.svg";
+  const isDarkMode = colorMode === "dark";
+  const svgSource = isDarkMode ? "/sun.svg" : "/moon_filled.svg";
 
-  const toggleColorMode = () => {
-    if (colorMode === "light") {
+  const toggleColorMode = (event) => {
+    if (event.target.checked) {
       setColorMode("dark");
     } else {
       setColorMode("light");
@@ -20,8 +20,14 @@ export default function DarkToggle() {
   };
 
   return (
-    <button className="dark-mode-button" onClick={toggleColorMode}>
+    <label className="dark-mode-button">
+      <input
+        type="checkbox"
+        checked={isDarkMode}
+        onChange={toggleColorMode}
+        hidden
+      />
       <img src={svgSource} height="16px" width="16px" alt="dark-mode" />
-    </button>
+    </label>
   );
 }

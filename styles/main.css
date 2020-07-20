@@ -34,8 +34,8 @@ footer {
 }
 
 footer .footer-item {
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 footer img {
@@ -96,6 +96,10 @@ code {
 .dark-mode-button {
   height: 24px;
   width: 48px;
+}
+
+.dark-mode-button:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
