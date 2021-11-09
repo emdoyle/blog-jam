@@ -1,6 +1,6 @@
 {
   "name": "blog-jam",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,15 +8,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "glob": "^7.1.6",
-    "moment": "^2.26.0",
-    "next": "9.4.1",
-    "raw-loader": "^4.0.1",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "react-markdown": "^4.3.1"
+    "glob": "^7.2.0",
+    "moment": "^2.29.1",
+    "next": "12.0.3",
+    "raw-loader": "^4.0.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-markdown": "^7.1.0"
   },
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.4.1"
   }
 }

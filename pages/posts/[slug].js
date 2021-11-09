@@ -8,7 +8,9 @@ export default function Post(props) {
   return (
     <Layout noHeader lastUpdated={props.lastUpdated}>
       <div className="post-content">
-        <ReactMarkdown source={props.markdownBody} />
+        <ReactMarkdown>
+        {props.markdownBody}
+        </ReactMarkdown>
       </div>
       <style jsx>{`
         .post-content {

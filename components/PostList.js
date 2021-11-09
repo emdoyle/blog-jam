@@ -6,7 +6,7 @@ export default function PostList(props) {
         <div>
             {props.postNames.map(postName => (
                 <React.Fragment key={`${postName}-fragment`}>
-                    <Link href={"posts/[slug]"} as={`posts/${postName}`}>
+                    <Link href={`/posts/${postName}`}>
                         <a>{postName}</a>
                     </Link>
                     <br />
