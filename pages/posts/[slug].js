@@ -1,5 +1,6 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from 'remark-gfm'
 import glob from "glob";
 import moment from "moment";
 import Layout from "../../components/Layout";
@@ -8,7 +9,7 @@ export default function Post(props) {
   return (
     <Layout noHeader lastUpdated={props.lastUpdated}>
       <div className="post-content">
-        <ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {props.markdownBody}
         </ReactMarkdown>
       </div>
