@@ -21,7 +21,7 @@ export async function getStaticProps({ ...ctx }) {
   const { slug } = ctx.params;
   const posts = glob.sync("**/*.md", { cwd: "posts/" });
   const selectedPostName = posts.find((postName) => postName.slice(11, -3) === slug);
-  const content = await import(`../../posts/${selectedPostName.slice(0, -3)}.md`);
+  const content = await import(`../../posts/${selectedPostName}`);
   return {
     props: {
       markdownBody: content.default,

@@ -6,7 +6,7 @@ export default function PostList(props) {
     <div className="post-list">
       {props.postNames.map((postName) => (
         <Link key={`${postName}-key`} href={`/posts/${postName}`}>
-          <a>{postName}</a>
+          <a>{postName.replaceAll(/\W|_/gi, " ")}</a>
         </Link>
       ))}
     </div>
