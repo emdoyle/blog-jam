@@ -15,18 +15,75 @@ body {
   align-items: center;
 }
 
+.container > hr {
+  width: 100%;
+}
+
 main {
   flex: 1;
+  width: 1000px;
+}
+
+.back-home-bar {
+  width: 1000px;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.back-home-bar a:hover {
+  color: #327da8;
+  transition: all 0.2s linear 0.01s;
+}
+
+.title-page-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.post-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-content {
+  text-align: left;
+}
+
+.post-content > h1, h2:first-of-type {
+  text-align: center;
+}
+
+.post-content > h2:first-of-type {
+  margin-bottom: 5rem;
+}
+
+.post-content > h2 {
+  font-size: 1.25em;
+}
+
+.post-content a {
+  text-decoration: underline;
+}
+
+.post-content a:hover {
+  color: #327da8;
+  transition: all 0.2s linear 0.01s;
+}
+
+.post-content h2 > a:hover {
+  font-size: 1.3rem;
+}
+
 footer {
   width: 100%;
   height: 100px;
-  border-top: 1px solid #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,9 +163,11 @@ code {
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media (max-width: 1100px) {
+  main {
+    width: 80vw;
+  }
+  .back-home-bar {
+    width: 80vw;
   }
 }

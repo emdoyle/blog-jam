@@ -3,14 +3,11 @@ import Link from "next/link";
 
 export default function PostList(props) {
   return (
-    <div>
+    <div className="post-list">
       {props.postNames.map((postName) => (
-        <React.Fragment key={`${postName}-fragment`}>
-          <Link href={`/posts/${postName}`}>
-            <a>{postName}</a>
-          </Link>
-          <br />
-        </React.Fragment>
+        <Link key={`${postName}-key`} href={`/posts/${postName}`}>
+          <a>{postName}</a>
+        </Link>
       ))}
     </div>
   );

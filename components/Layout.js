@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import DarkMode from "./DarkMode";
 import DarkToggle from "./DarkToggle";
+import { BackHomeBar } from "./BackHomeBar";
 
 export default function Layout(props) {
   return (
@@ -15,15 +16,20 @@ export default function Layout(props) {
         />
         <DarkMode />
       </Head>
-      <main>
-        {!props.noHeader && (
-          <React.Fragment>
-            <h1 className="title">{props.siteTitle}</h1>
-            <p className="description">{props.siteDescription}</p>
-          </React.Fragment>
-        )}
-        {props.children}
-      </main>
+      {props.titlePage ? (
+        <main className="title-page-content">
+          <h1 className="title">{props.siteTitle}</h1>
+          <p className="description">{props.siteDescription}</p>
+          {props.children}
+        </main>
+      ) : (
+        <>
+          <BackHomeBar />
+          <hr />
+          <main>{props.children}</main>
+        </>
+      )}
+      <hr />
       <footer>
         <div className="footer-item">
           <DarkToggle />
