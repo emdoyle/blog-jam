@@ -3,12 +3,13 @@ import Head from "next/head";
 import DarkMode from "./DarkMode";
 import DarkToggle from "./DarkToggle";
 import { BackHomeBar } from "./BackHomeBar";
+import { SITE_TITLE, SITE_SUBTITLE } from "../utils/constants";
 
 export default function Layout(props) {
   return (
     <div className="container">
       <Head>
-        <title>Figures</title>
+        <title>{SITE_TITLE}</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -18,8 +19,8 @@ export default function Layout(props) {
       </Head>
       {props.titlePage ? (
         <main className="title-page-content">
-          <h1 className="title">{props.siteTitle}</h1>
-          <p className="description">{props.siteDescription}</p>
+          <h1 className="title">{SITE_TITLE}</h1>
+          <p className="description">{SITE_SUBTITLE}</p>
           {props.children}
         </main>
       ) : (

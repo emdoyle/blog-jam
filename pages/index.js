@@ -6,12 +6,7 @@ import glob from "glob";
 
 export default function Home(props) {
   return (
-    <Layout
-      titlePage
-      siteTitle="Figures"
-      siteDescription="Some blog posts"
-      lastUpdated={props.lastUpdated}
-    >
+    <Layout titlePage lastUpdated={props.lastUpdated}>
       <PostList postNames={props.postNames} />
     </Layout>
   );
