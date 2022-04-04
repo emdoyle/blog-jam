@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.33.3",
     "glob": "^7.2.0",
     "moment": "^2.29.1",
     "next": "12.1.0",

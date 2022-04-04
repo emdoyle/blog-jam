@@ -124,6 +124,12 @@ footer a {
   align-items: center;
 }
 
+.email-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
