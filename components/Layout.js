@@ -4,6 +4,7 @@ import DarkMode from "./DarkMode";
 import DarkToggle from "./DarkToggle";
 import { BackHomeBar } from "./BackHomeBar";
 import { SITE_TITLE, SITE_SUBTITLE } from "../utils/constants";
+import { EmailForm } from "./EmailForm";
 
 export default function Layout(props) {
   return (
@@ -32,10 +33,11 @@ export default function Layout(props) {
       )}
       <hr />
       <footer>
-        <div className="footer-item">
+        {props.emailForm && <EmailForm />}
+        <div className="footer-items">
           <DarkToggle />
+          <p>Last updated at: {props.lastUpdated}</p>
         </div>
-        <p className="footer-item">Last updated at: {props.lastUpdated}</p>
       </footer>
     </div>
   );

@@ -105,13 +105,15 @@ footer {
   width: 100%;
   height: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-footer .footer-item {
-  padding-left: 10px;
-  padding-right: 10px;
+footer .footer-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer img {
@@ -125,9 +127,34 @@ footer a {
 }
 
 .email-form {
+  width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.7rem;
+}
+
+.email-form * {
+  height: 40px;
+  border-radius: 6px;
+}
+
+.email-form input {
+  flex: 1;
+  padding: 0 0.5rem;
+}
+
+.email-form input:invalid:not(:focus) {
+  border: 2px solid #fc3c3c;
+}
+
+.email-form button {
+  min-width: 90px;
+}
+
+.email-form button:hover:not(:disabled) {
+  box-shadow: 0 0 1px 1px var(--color-text);
+  cursor: pointer;
 }
 
 .title a {
@@ -176,6 +203,9 @@ code {
 }
 
 .dark-mode-button {
+  position: relative;
+  top: 5px;
+  left: 5px;
   height: 24px;
   width: 48px;
 }
@@ -190,5 +220,11 @@ code {
   }
   .back-home-bar {
     width: 80vw;
+  }
+  img[alt='Slide Banner'] {
+    max-width: 80vw;
+  }
+  .email-form {
+    width: 60vw;
   }
 }

@@ -4,17 +4,15 @@ import remarkGfm from 'remark-gfm'
 import glob from "glob";
 import moment from "moment";
 import Layout from "../../components/Layout";
-import {EmailForm} from "../../components/EmailForm";
 
 export default function Post(props) {
   return (
-    <Layout lastUpdated={props.lastUpdated}>
+    <Layout lastUpdated={props.lastUpdated} emailForm>
       <div className="post-content">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
         {props.markdownBody}
         </ReactMarkdown>
       </div>
-      <EmailForm />
     </Layout>
   );
 }

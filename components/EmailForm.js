@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 export const EmailForm = () => {
   const [email, setEmail] = useState("");
   const submittingToastId = useRef(null);
+  const inputRef = useRef(null);
 
   // TODO: style the form, validate the email, pop up nice alert on success or failure
   const submitEmail = async () => {
@@ -40,17 +41,22 @@ export const EmailForm = () => {
   return (
     <div className="email-form">
       <input
-        type="text"
-        placeholder="Sign up for new post notifications"
+        ref={inputRef}
+        type="email"
+        placeholder="Subscribe by email"
         disabled={submittingToastId.current !== null}
         value={email}
         onChange={(event) => setEmail(event.target.value)}
       />
       <button
-        disabled={submittingToastId.current !== null}
+        disabled={
+          submittingToastId.current !== null ||
+          !email.trim() ||
+          (inputRef.current && !inputRef.current.checkValidity())
+        }
         onClick={() => submitEmail()}
       >
-        Submit
+        Subscribe
       </button>
     </div>
   );
