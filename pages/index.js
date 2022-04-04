@@ -16,6 +16,7 @@ export async function getStaticProps() {
   // TODO: order these somehow
   //   parse release date from title
   const posts = glob.sync("**/*.md", { cwd: "posts/" });
+  console.log(posts);
   return {
     props: {
       postNames: posts.map((postFileName) => postFileName.slice(11, -3)),
