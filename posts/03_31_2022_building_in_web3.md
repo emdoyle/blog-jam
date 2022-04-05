@@ -22,6 +22,7 @@ The experience of learning Solana and the other tools I needed was pretty differ
 - Contacting the developers directly through Discord was common
 
 Learning this stuff felt like trekking through the jungle, deciphering clues left behind by other travelers. The [Anchor discord](https://discord.gg/HB2kAveZ) and [Solana discord](https://discord.gg/solana) were critical at this point. The pattern was:
+
 1. Read the docs, read the source if it still doesn't make sense or the docs are missing
 2. Try to implement what I want (keep referencing source material)
 3. Ask a question in Discord about any assumptions that aren't holding up in implementation
@@ -88,6 +89,8 @@ Slide makes your DAO move faster. You can handle day-to-day payments and expense
 With Slide you can pre-approve a certain amount of funds for general expenses, then vote to grant administrative rights over these funds to specific officers in your DAO. Then, any DAO member can submit a claim for reimbursement which will be immediately available for withdrawal after an officer approves it.
 
 The product is in an open beta and every action occurs on *devnet* today. Feedback is more than welcome!
+
+The frontend was built on top of a very useful [scaffold repo](https://github.com/thuglabs/create-dapp-solana-nextjs) that I highly recommend. It's got a modern Next.js setup with a nice Tailwind theme and includes pretty much all the necessary solana web3 dependencies.
 
 ## Join me!
 
