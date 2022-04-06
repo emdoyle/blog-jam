@@ -103,7 +103,7 @@ In the future I might post:
 - cool stuff I've built!
 
 Add me on
-Discord (nashsando#1005)  |  [Twitter](https://twitter.com/evandoyleDEV)  |  [Github](https://github.com/emdoyle)
+Discord (nashsando#1005)  |  Telegram (@nashsando)  |  [Twitter](https://twitter.com/evandoyleDEV)  |  [Github](https://github.com/emdoyle)
 
 ## Shoutouts
 
