@@ -8,7 +8,7 @@
       background: "#fff",
     },
     dark: {
-      text: "#999",
+      text: "#bbbbbb",
       background: "#1a1919",
     },
   };

@@ -75,6 +75,7 @@ a:hover {
 
 .post-content > h2 {
   font-size: 1.25em;
+  margin-top: 2.5rem;
 }
 
 .post-content h2 > a:hover {

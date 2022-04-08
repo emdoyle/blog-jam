@@ -1,3 +1,7 @@
+---
+title: Building without Barriers in Web3
+subtitle: How I built Slide for the Riptide Hackathon
+---
 # Building without Barriers in Web3
 ## How I built [Slide](https://getslide.xyz) for the Riptide Hackathon
 

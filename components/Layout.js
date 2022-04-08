@@ -10,12 +10,11 @@ export default function Layout(props) {
   return (
     <div className="container">
       <Head>
-        <title>{SITE_TITLE}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css"
-        />
+        <title>{props.title ?? SITE_TITLE}</title>
+        <meta charSet="UTF-8" />
+        <meta name="description" content={props.subtitle ?? SITE_SUBTITLE} />
+        <meta name="author" content="Evan Doyle" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <DarkMode />
       </Head>
       {props.titlePage ? (
