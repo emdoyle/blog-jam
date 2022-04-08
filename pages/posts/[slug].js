@@ -4,15 +4,17 @@ import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkGfm from 'remark-gfm'
 import remarkFrontmatter from "remark-frontmatter";
+import remarkDirective from "remark-directive";
 import glob from "glob";
 import moment from "moment";
 import Layout from "../../components/Layout";
+import {remarkCallouts} from "../../utils/remarkPlugins";
 
 export default function Post(props) {
   return (
     <Layout title={props.title} subtitle={props.subtitle} lastUpdated={props.lastUpdated} emailForm>
       <div className="post-content">
-        <ReactMarkdown remarkPlugins={[remarkGfm, remarkFrontmatter]}>
+        <ReactMarkdown remarkPlugins={[remarkDirective, remarkCallouts, remarkGfm, remarkFrontmatter]}>
         {props.markdownBody}
         </ReactMarkdown>
       </div>

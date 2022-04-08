@@ -29,7 +29,7 @@ Learning this stuff felt like trekking through the jungle, deciphering clues lef
 
 1. Read the docs, read the source if it still doesn't make sense or the docs are missing
 2. Try to implement what I want (keep referencing source material)
-3. Ask a question in Discord about any assumptions that aren't holding up in implementation
+3. Ask questions in Discord about any assumptions that aren't holding up in implementation
 4. Repeat
 
 It was challenging, but it was a pleasant surprise to find that most fellow explorers were more than willing to lend a hand. The web3 programming model seems to lead to global incentives for developers to collaborate, since 'growing the community' is almost always the top priority.
@@ -65,7 +65,9 @@ As a dev, I can't really imagine getting deeply involved in a web3 community wit
 
 ## Permissionless Integration
 
+:::note{.callout}
 This is the idea that keeps coming back to me. The most significant difference in my experience building in web3 was the fact that integrating with existing programs was _permissionless_. The on-chain data is *public*. The program itself is *public*. There is no API token, there is no OAuth flow, there are no developer terms-of-service. Every program is running on the same, globally-distributed VM, and in some real sense that means every developer building on Solana is working on the _same project_.
+:::
 
 Coming back down to earth though, there are still some practical considerations when integrating with an existing on-chain program that I'm curious to watch evolve over time:
 - upgradeability and dependency version control in general

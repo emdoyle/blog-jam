@@ -82,6 +82,12 @@ a:hover {
   font-size: 1.3rem;
 }
 
+.post-content .callout {
+  padding-left: 2rem;
+  font-size: 1.05rem;
+  border-left: 2px solid var(--color-text);
+}
+
 .center-image-md {
   display: flex;
   align-items: center;
