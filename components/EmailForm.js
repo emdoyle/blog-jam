@@ -1,13 +1,12 @@
 import React, { useState, useRef } from "react";
-import { supabase } from "../utils/supabaseClient";
 import { toast } from "react-toastify";
+import { storeEmail } from "../utils/firestore";
 
 export const EmailForm = () => {
   const [email, setEmail] = useState("");
   const submittingToastId = useRef(null);
   const inputRef = useRef(null);
 
-  // TODO: style the form, validate the email, pop up nice alert on success or failure
   const submitEmail = async () => {
     if (submittingToastId.current !== null) {
       toast.dismiss(submittingToastId.current);
@@ -17,10 +16,7 @@ export const EmailForm = () => {
         autoClose: false,
         onClose: () => (submittingToastId.current = null),
       });
-      const { error } = await supabase.from("User").insert([{ email }]);
-      if (error) {
-        throw error;
-      }
+      await storeEmail(email);
     } catch (error) {
       toast.update(submittingToastId.current, {
         render: error.message ?? "An unexpected error occurred.",
